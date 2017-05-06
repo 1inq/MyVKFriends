@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		739C38491EBDD84000C8ABB8 /* ASServerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 739C38481EBDD84000C8ABB8 /* ASServerManager.m */; };
 		73B4F2001EBDCB9E005D5B79 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 73B4F1FF1EBDCB9E005D5B79 /* main.m */; };
 		73B4F2031EBDCB9E005D5B79 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 73B4F2021EBDCB9E005D5B79 /* AppDelegate.m */; };
 		73B4F2061EBDCB9E005D5B79 /* ASViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 73B4F2051EBDCB9E005D5B79 /* ASViewController.m */; };
@@ -16,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		739C38471EBDD84000C8ABB8 /* ASServerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASServerManager.h; sourceTree = "<group>"; };
+		739C38481EBDD84000C8ABB8 /* ASServerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASServerManager.m; sourceTree = "<group>"; };
 		73B4F1FB1EBDCB9E005D5B79 /* APITest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = APITest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		73B4F1FF1EBDCB9E005D5B79 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		73B4F2011EBDCB9E005D5B79 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -96,6 +99,8 @@
 				73B4F2021EBDCB9E005D5B79 /* AppDelegate.m */,
 				73B4F2041EBDCB9E005D5B79 /* ASViewController.h */,
 				73B4F2051EBDCB9E005D5B79 /* ASViewController.m */,
+				739C38471EBDD84000C8ABB8 /* ASServerManager.h */,
+				739C38481EBDD84000C8ABB8 /* ASServerManager.m */,
 				73B4F2071EBDCB9E005D5B79 /* Main.storyboard */,
 				73B4F20A1EBDCB9E005D5B79 /* Assets.xcassets */,
 				73B4F20C1EBDCB9E005D5B79 /* LaunchScreen.storyboard */,
@@ -243,6 +248,7 @@
 			files = (
 				73B4F2061EBDCB9E005D5B79 /* ASViewController.m in Sources */,
 				73B4F2031EBDCB9E005D5B79 /* AppDelegate.m in Sources */,
+				739C38491EBDD84000C8ABB8 /* ASServerManager.m in Sources */,
 				73B4F2001EBDCB9E005D5B79 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
