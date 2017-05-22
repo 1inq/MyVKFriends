@@ -7,8 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ASUserViewController.h"
 
-@interface ASViewController : UITableViewController
+@interface ASViewController : UITableViewController <UITableViewDataSource, UITableViewDelegate>
+
 
 
 @end
