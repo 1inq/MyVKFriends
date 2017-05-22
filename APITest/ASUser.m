@@ -18,6 +18,7 @@
         self.lastName = [response objectForKey:@"last_name"];
         //NSLog(@"set ID to : %d for user %@ %@", [[response objectForKey:@"uid"] intValue], self.firstName, self.lastName);
         self.id = [[response objectForKey:@"uid"] intValue];
+        
         self.city = [response objectForKey:@"city"];
         
         NSString *url50String = [response objectForKey:@"photo_50"];

@@ -35,6 +35,10 @@
     
     [self getUserInfoForID:self.userID];
     
+    self.userStatusLabel.numberOfLines = 0;
+    
+    [self.userStatusLabel sizeToFit];
+    
     NSLog(@"User in VC: %@", self.user);
 }
 
@@ -59,9 +63,10 @@
 #pragma mark - UITableViewDelegate
 
 - (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    [self tableView:tableView didDeselectRowAtIndexPath:indexPath];
+    
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
 }
-
 
 #pragma mark - Table view data source
 
@@ -77,13 +82,23 @@
         
         self.user = user;
         
+        if (self.user.city) {
+            [[ASServerManager sharedManager] getCityWithId: [NSNumber numberWithInteger:[self.user.city intValue]]
+                                                 onSuccess:^(NSString *cityName) {
+                self.userCityLabel.text = cityName;
+            } onFailure:^(NSError *error, NSInteger statusCode) {
+                NSLog(@"Error: %@; Status Code:  %d", [error localizedDescription], (int)statusCode);
+            }];
+        }
+        
         self.navigationItem.title = user.firstName;
         
-        self.userNameLabel.text = [NSString stringWithFormat:@"  %@ %@ ", self.user.firstName , self.user.lastName];
+        self.userNameLabel.text = [NSString stringWithFormat:@"%@ %@", self.user.firstName , self.user.lastName];
         self.userCityLabel.text = [NSString stringWithFormat:@"%d" , [self.user.city intValue]];
         
         self.userStatusLabel.text = self.user.status;
         self.userEducationLabel.text = self.user.education;
+        
         
         
         [self.userPic setImageWithURL: self.user.image200URL];
